@@ -2,7 +2,7 @@ public class Semaforo {
     private int valore;
 
     public Semaforo(){
-        valore = 1;
+        valore = 2;
     }
 
     public synchronized void P(){
