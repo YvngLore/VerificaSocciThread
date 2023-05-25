@@ -2,7 +2,7 @@ public class Semaforo {
     private int valore;
 
     public Semaforo(){
-        valore = 2;
+        valore = 2; // cambia soltanto la molteciplità del box, possono entrare 2 vetture alla volta
     }
 
     public synchronized void P(){

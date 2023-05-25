@@ -28,12 +28,13 @@ public class Monoposto extends Thread{
             System.out.println("->GIRO-" + (i+1) + "--->" + Thread.currentThread().getName() + " ha completato un giro...\n");
             numeroGiri++;
 
-            semaforo.P();
+            
             if(numeroGiri == 3 || numeroGiri == 6 || numeroGiri == 9){
+                semaforo.P();
                 box.cambioGomme(Thread.currentThread().getName());
                 System.out.println("----->CAMBIO DI GOMME EFFETTUATO --- " + Thread.currentThread().getName() + " Torna in gara!");
+                semaforo.V();
             }
-            semaforo.V();
         }
     }
 }
